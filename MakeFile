@@ -1,0 +1,13 @@
+CC=gcc
+TARGET=exefile
+OBJECT=1000.o
+
+$(TARGET) : $(OBJECT)
+    $(CC) -o $(TARGET) 1000.o
+
+
+main.o : main.c
+    $(CC) -c -o 1000.o 1000.c
+
+clean:
+    rm $(OBJECT) $(TARGET)
