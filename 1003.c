@@ -4,7 +4,7 @@
 
 
 int record[41]={1,1,};
-
+// fibonacci by dynamic programming 
 int fibonacci(int n){
   
     if(n==0) {
