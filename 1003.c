@@ -2,9 +2,10 @@
 #include<stdlib.h>
 #pragma warning(disable:4996)
 
-
-int record[41]={1,1,};
 // fibonacci by dynamic programming 
+
+static int record[41]={1,1,};
+
 int fibonacci(int n){
   
     if(n==0) {
@@ -17,7 +18,6 @@ int fibonacci(int n){
     else {
         if(record[n] > 0) return record[n];
     }
-    
     return record[n] = fibonacci(n-1)+fibonacci(n-2);
 }
 
