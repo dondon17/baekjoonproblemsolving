@@ -1,22 +1,21 @@
 #include<stdio.h>
 #pragma warning(disable:4996)
-int f[90];
+long long fibo[91];
 
-int fibo(int num){
-    if(num<=1) {
-        f[num]=num;
-        return f[num];
+long long fibonacci(int num, long long f[]){
+    f[0] = 0;
+    f[1] = 1;
+    if(num > 1){
+        for(int i = 2; i <= num; i++){
+            f[i] = f[i-2]+f[i-1];
+        }
     }
-    if(f[num]!=0) return f[num];
-    else {
-        f[num] = fibo(num-1)+fibo(num-2);
-        return f[num];
-    }
+    return f[num];
 }
 
 int main(void){
     int n;
     scanf("%d", &n);
-    printf("%d\n", fibo(n));
+    printf("%lld\n", fibonacci(n, fibo));
     return 0;
 }
