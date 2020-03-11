@@ -2,23 +2,23 @@
 #include<stdlib.h>
 #include<string.h>
 #pragma warning(disable:4996)
+
+void printarray(char arr[], int n){
+    for (int i = 0; i < strlen(arr); i++){
+        for (int j = 0; j < n; j++){
+            printf("%c", arr[i]);
+        }
+    }
+    printf("\n");
+}
+
 int main(void){
-    int num;
-    int len;
-    char tmp[50];
-
-    scanf("%d", &num);
-
-    char *word[num];
-
-    for(int i=0;i<num;i++){
-        scanf("%s", tmp);
-        len = strlen(tmp)+1;
-
-        word[i] = (char*)malloc(sizeof(char)*len);
+    int n, cnt;
+    char str[21];
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++){
+        scanf("%d %s", &cnt, str);
+        printarray(str, cnt);
     }
-    for (int i = 0; i < num; i++){
-        printf("%s\n", word[i]);
-    }
-    return 0;   
+    return 0;
 }
