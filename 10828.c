@@ -60,7 +60,7 @@ int main(void){
 
         if(!strcmp(str, "push")){
             scanf("%d", &num);
-            fgetc(stdin);
+            fgetc(stdin); // buffer를 비워주는 역할
             Push(&stack, num);
         }
         else if(!strcmp(str, "pop")) printf("%d\n", Pop(&stack));
