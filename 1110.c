@@ -9,7 +9,6 @@ int main(void){
     int new = getnum(n);
     
     while (1){
-        
         if(n == new){
             printf("%d\n", ++count);
             break;
@@ -19,6 +18,5 @@ int main(void){
             count++;
         }
     }
-
     return 0;
 }
