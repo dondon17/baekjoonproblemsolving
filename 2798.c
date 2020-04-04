@@ -1,19 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+#pragma warning(disable:4996)
 int main(void){
-    int n, m, sum = 0;
-    int max = -1;
-    scanf("%d %d", &n, &m);
-    
-    int *arr = (int*)malloc(sizeof(int)*n);
-    for(int i=0; i<n; i++) scanf("%d", &arr[i]);
+    int N, M;
+    int sum=0, max=-1;
+    scanf("%d %d", &N, &M);
 
-    for(int i=0; i<n; i++){
-        for(int j=i+1; j<n; j++){
-            for(int k=j+1; k<n; k++){
-                sum = arr[i] + arr[j] +arr[k];
-                if(sum > max && sum <= m) max = sum;
+    int *arr = (int*)malloc(sizeof(int)*N);
+    for(int i=0; i<N; i++) scanf("%d", &arr[i]);
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            for(int k=0; k<N; k++){
+                sum = arr[i]+arr[j]+arr[k];
+                if(sum > max && sum <= M) max = sum;
             }
         }
     }
