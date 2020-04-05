@@ -22,8 +22,10 @@ int d(int n){
 int main(void){
     for(int i=1; i<MAX_SIZE; i++){
         int index = d(i);
+        // 해당 index를 갖는 배열의 요소를 1로 초기화(생성자가 있는 수이므로) 
         if(index < MAX_SIZE) arr[index] = 1;
     }
+    // 값이 0인 요소들은 생성자가 없는 셀프넘버 이므로 0인 요소들의 index 를 출력
     for(int i=1; i<MAX_SIZE; i++){
         if(arr[i] == 0) printf("%d\n", i);
     }
