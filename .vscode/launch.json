@@ -7,14 +7,14 @@
 
         {
             "name": "(Windows) 시작",
-            "type": "cppvsdbg",
+            "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/1000.c",
+            "program": "${file}",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false
+            // "stopAtEntry": false,
+            "cwd": "${workspaceFolder}"
+            // "environment": [],
+            // "externalConsole": false
         }
     ]
 }
